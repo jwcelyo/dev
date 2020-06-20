@@ -1,0 +1,14 @@
+[Unit]  
+Description=AuraGrid 
+  
+[Service]  
+WorkingDirectory=/var/aura/
+ExecStart=/usr/bin/dotnet /var/aura//Aura.GridCore.dll
+User=www-data  
+Restart=always
+SyslogIdentifier=dotnet-sample-service  
+Environment=ASPNETCORE_ENVIRONMENT=Production
+Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false  
+  
+[Install]  
+WantedBy=multi-user.target  
