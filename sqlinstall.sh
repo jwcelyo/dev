@@ -11,5 +11,6 @@ sudo apt-get install mssql-tools unixodbc-dev
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
+sudo /opt/mssql/bin/mssql-conf set network.ipaddress 127.0.0.1
 sudo /opt/mssql/bin/mssql-conf set network.tcpport 3389
 reboot
