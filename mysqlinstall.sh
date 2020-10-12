@@ -11,6 +11,6 @@ service mysql stop
 sed -i "s/.*bind-address.*/bind-address = ${iplocal}/" /etc/mysql/mysql.conf.d/mysqld.cnf
 service mysql start
 echo "GRANT ALL ON *.* to root@'%' IDENTIFIED BY '${varname}';"  
-sudo mysql -u root -p $varname -e "GRANT ALL ON *.* to root@'%' IDENTIFIED BY '${varname}';" 
+sudo mysql -e "GRANT ALL ON *.* to root@'%' IDENTIFIED BY '${varname}';" 
 
 
